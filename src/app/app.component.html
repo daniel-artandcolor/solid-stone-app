@@ -1,0 +1,113 @@
+<div id="page-home">
+  <div class="section-header fixed-top">
+      <nav  [ngStyle]="{'display':seconColorNav === true ? 'none' : 'block' }" class="nav-info pt-2 pb-2">
+        <div class="container text-center">
+          <div  style="margin-left: auto !important; margin-right: auto !important;"> <span [ngStyle]="{'visibility':seconColorNav === true ? 'hidden' : 'visible' }" style="font-size: 0.8rem; color: #FFF;" class="pl-1 pr-2">+1 (203) 570-9640</span><span [ngStyle]="{'visibility':seconColorNav === true ? 'hidden' : 'visible' }" style="font-size: 0.8rem; color: #FFF;" class="pl-2">info@solidstonemasonry.com</span></div>
+        </div>
+      </nav>
+      <nav class="navbar  navbar-expand-lg navbar-light bg-light">
+        <!-- <button   style="padding-top: 0.5rem; padding-bottom: 0.5rem;" (click)="scrollToElement(home)"  mat-flat-button class="btn" ><img style="width: 8rem;"  src="assets/LogoPrincipal2.svg" alt=""></button> -->
+        <button (click)="changeColorNav(false)"  (click)="scrollToElement(about)" mat-flat-button class="btn btn-logo" ><div ></div></button>
+        <button type="button" class="btn menu menu-drop" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
+          aria-controls="collapseExample">
+              <span><fa-icon style="color: #FE813E;" [icon]="faBars"></fa-icon></span>
+        </button>
+      
+        <ul class="parts navbar-nav  firt-nav">
+          <li class="nav-item active">
+            <button (click)="changeColorNav(false)" (click)="scrollToElement(about)" class="btn medium active-button">
+              about
+            </button>
+          </li>
+          
+          <li class="nav-item">
+            <button  (click)="changeColorNav(true)" (click)="scrollToElement(services)"  class="btn medium active-button"  >
+              services
+            </button>
+            
+          </li>
+          <li class="nav-item">
+            <button (click)="scrollToElement(improvement)"  (click)="changeColorNav(true)" class="btn medium active-button ">
+              improvement
+            </button>
+            
+          </li>
+          <li class="nav-item">
+            <button  (click)="scrollToElement(projects)"  (click)="changeColorNav(true)"   class="btn medium active-button "  >
+              projects
+            </button>
+          </li>
+          <li class="button-contact-nav nav-item">
+            <button (click)="scrollToElement(contact)"  (click)="changeColorNav(true)"    class="btn btn-contact medium active-button "  >
+              CONTACT
+            </button>
+          </li>
+        </ul>
+  
+        
+        <div #collapse="ngbCollapse" class="menu-drop" [(ngbCollapse)]="isCollapsed">
+          
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <button (click)="collapse.toggle()" (click)="changeColorNav(true)" (click)="scrollToElement(services)"  class="btn ">
+                <span  class="nav-link label-header semi-bold label-second-menu" >Service</span>
+              </button>
+            </li>
+            
+            <li class="nav-item">
+              <button (click)="collapse.toggle()" (click)="scrollToElement(improvement)"  (click)="changeColorNav(true)" class="btn "  >
+                <span class="nav-link label-header semi-bold label-second-menu" >Improvement</span>
+              </button>
+              
+            </li>
+            <li class="nav-item">
+              <button (click)="collapse.toggle()" (click)="scrollToElement(projects)"  (click)="changeColorNav(true)"    class="btn ">
+                <span class="nav-link label-header semi-bold label-second-menu" >Projects</span>
+              </button>
+              
+            </li>
+            <li class="nav-item">
+              <button (click)="collapse.toggle()" (click)="scrollToElement(contact)"  (click)="changeColorNav(true)"     class="btn "  >
+                <span class="nav-link label-header semi-bold label-second-menu" >Contact</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  </div>
+  
+  
+  <section #about class="about-section">
+    <div class="section-text-home">
+      <span class="text-home regular">Our company <br> cares about</span> <br>  
+      <span  class="text-home bold">your needs.</span> <br>
+      <button (click)="changeColorNav(true)" (click)="scrollToElement(contact)" class="btn-hire-home mt-3 medium btn" >HIRE US</button>
+    </div>
+    <div class="overlay"></div>
+  </section>
+
+  <section #services  class="service-section">
+    <app-services ></app-services>
+  </section>
+
+  <section  #improvement >
+    <app-improvement></app-improvement>
+    <div class="row-flow mt-5 mb-5 text-center">
+      <button (click)="changeColorNav(true)" (click)="scrollToElement(contact)" class="button-hire btn bold">HIRE US</button>
+    </div>
+  </section>
+
+  <section  #projects>
+    <app-projects>
+      
+    </app-projects>
+   
+  </section>
+
+  <section #contact> 
+    <app-contact></app-contact>
+  </section>
+    
+</div>
+
+<!-- <router-outlet></router-outlet> -->

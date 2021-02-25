@@ -1,0 +1,269 @@
+* {
+box-sizing: border-box;
+}
+
+.col-container {
+position: relative;
+display: table;
+width: 100%;
+
+}
+.col-r {
+display: table-cell;
+}
+
+.column-1{
+    width: 45%;
+    background-image: url(~src/assets/img/image-contact.png); 
+    background-size: 100% 100%;
+    padding-left: 4rem;
+    margin-top: 10rem;
+    height: 100vh;
+}
+
+
+
+
+.column-2{
+    width: 55%;
+    background-color: #3E3E40;
+    padding-left: 7rem;
+    padding-right: 0rem;
+    padding-top: 8rem;
+    height: 100vh;
+}
+
+
+.row-sponsered{
+    position: absolute; 
+    bottom: 1rem;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+/*change color of label*/
+color: #FE813E !important;
+}
+
+.mat-form-field-empty.mat-form-field-label {
+    color: #FFF;
+}
+
+::ng-deep.mat-form-field-underline {
+/*change color of underline*/
+background-color: #FFF !important;
+} 
+
+::ng-deep.mat-form-field-ripple {
+/*change color of underline when focused*/
+background-color: #FE813E !important;;
+}
+
+.letter-big-white{
+    color: #FFF;
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.letter-small-white{
+    color: #FFF;
+    font-size: 0.8rem;
+}
+
+
+.icon-location{
+    background-image: url(~src/assets/img/location.svg);
+    width: 2rem;
+    margin-right: 0.8rem;
+    margin-top: .5rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+}
+
+.icon-personal{
+    background-image: url(~src/assets/img/personal.svg); 
+    width: 2rem;
+    margin-right: 0.8rem;
+    margin-top: .5rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+}
+
+
+.social-media{
+    margin-top: 3rem;
+}
+
+.icon-instagram{
+    background-image: url(~src/assets/img/instagram.svg);
+    width: 3rem; 
+    height: 3rem;
+    margin-right: 3rem;
+    margin-left: auto;
+    background-repeat: no-repeat;
+}
+
+.icon-facebook{
+    background-image: url(~src/assets/img/facebook.svg);
+    width: 3rem; 
+    height: 3rem;
+    background-repeat: no-repeat;
+}
+
+.overlay{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    width: 100%;
+    top: inherit;
+    height: 100vh;
+    transition: .5s ease;
+    opacity:.5;
+}
+
+.address{
+    width: 12rem; line-height: 1rem; padding-top: 0.4rem;
+}
+
+.personal-info{
+    width: 12rem; line-height: 1rem; padding-top: 0.4rem;
+}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .column-1{
+        display: none;
+    }
+    .column-2{
+        display: none;
+    }
+
+    .column-1-responsive{
+        width: 100%;
+        height: 30rem;
+        padding-top: 11rem;
+        background-image: url(~src/assets/img/image-contact.png); 
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .column-2-responsive{
+        padding-top: 3rem;
+        width: 100%;
+        height: 37rem;
+        background-color: #3E3E40; ;
+    }
+ 
+    .icon-location{
+        margin: 0 !important;
+    }
+
+    .icon-personal{
+        margin: 0 !important;
+    }
+
+    .letter-big-white{
+        font-size: 2rem;
+    }
+
+   
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    
+    .column-1{
+        display: none;
+    }
+    .column-2{
+        display: none;
+    }
+
+    .column-1-responsive{
+        width: 100%;
+        height: 30rem;
+        background-image: url(~src/assets/img/image-contact.png); 
+    }
+
+    .column-2-responsive{
+        width: 100%;
+        height: 40rem;
+        background-color: #3E3E40; ;
+    }
+ 
+}
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+   
+    .column-1{
+        display: none;
+    }
+    .column-2{
+        display: none;
+    }
+
+    .column-1-responsive{
+        width: 100%;
+        height: 40rem;
+        padding-top: 21rem;
+        background-image: url(~src/assets/img/image-contact.png); 
+    }
+
+    .column-2-responsive{
+        padding: 6rem 6rem;
+        width: 100%;
+        height: 50rem;
+        background-color: #3E3E40; ;
+    }
+
+
+    
+
+    
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .contact-responsive{
+        display: none;
+    }
+    
+    .row-sponsered .ml-4{
+        margin-left: 0rem !important;
+    }
+
+    .row-sponsered .ml-1{
+        margin-left: 0rem !important;
+    }
+    .letter-small-white{
+        font-size: 0.7rem;
+    }
+
+    .address{
+        width: 9rem;
+        line-height: 1rem;
+        padding-top: 0.4rem;
+    }
+
+    .personal-info{
+        width: 9rem;
+    }
+
+    
+    
+    
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .contact-responsive{
+      display: none;
+  }
+}
+
+
+
+
